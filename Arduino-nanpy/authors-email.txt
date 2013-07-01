@@ -1,0 +1,17 @@
+I see from Dr Simon Monk’s blog that you are interested in connecting Pis and Arduinos. Following the article in on page 12 of MagPi issue 8 by Andrea Stagi who wrote nanpy I have been investigating its possibilities. I found the article very interesting but too difficult for those new to RPi to follow. It took me some time but I have now got the system working properly and have produced a simple guide on how to set up the system. It allows the user to read and write with all the Arduino’s pins. You can set the digital pins high and low, read values from analog pins and control PWM on those pins which support it. All this is possible from simple Python programming. The built in LCD library is also very easy to use. It makes an ideal first add-on I/O board for Pi users and offers and introduction to using an Arduino for other projects in which they may want to separate the  boards and use the Arduino to control a floor-bot on its own. Obviously the Arduino can be programmed by the Pi using the Arduino IDE.
+
+ 
+
+I have written a simple guide to setting up the system with . I have attached a copy, which you may find interesting. I will be demonstrating the system at the York Raspberry Jam on Saturday in York.
+
+ 
+
+I have attached a copy of the guide and would be delighted to hear your comments.
+
+ 
+
+Regards
+
+ 
+
+Tony Goodhew
