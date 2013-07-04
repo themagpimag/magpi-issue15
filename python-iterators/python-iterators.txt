@@ -1,0 +1,51 @@
+1 Introduction
+
+In this article we introduce Python iterators and generators. In computer science, an iterator is a container comprising a number of items. The items themselves are arbitrary and can be any data structure the language supports (they can even be other iterator objects).
+
+Iterators can be processed using common methods regardless of the nature of the items within the iterator. In contrast, with programming languages like C, lists (arrays) are traversed by looping through an index sequence counter or by incre- menting a pointer.
+
+The C programmer has to know how many items there are (or test for a null pointer) in order to prevent looping beyond the end of the list. In contrast, iterators provide a way of signalling that the container has been exhausted, forcing the loop to terminate.
+
+A generator is an abstract control mechanism that produces a sequence, returning a new value each time it is called. Generators in Python resemble regular functions. What distinguishes regular functions from generators is that generators relinquish control by calling yield instead of return. This allows generators to be resumed later on. Generators are typically used to implement iterators but they can be used to write simple coroutines for co-operative multitasking.
+
+2 Examples
+
+In programming languages like C and Pascal, the for statement iterates over a pro- gression of numbers. The for-loop construct has a start value and a termination condition (plus an optional step value). Python’s for statement is different, in that, it iterates over a sequence (list, tuple or data dictionary). To illustrate, run the interactive Python interpreter and define a list:
+
+>>> a = [1,2,3,4,5]
+Now loop through the list (type CTRL-D after the “...”):
+>>> ... ... 12345
+for i in a: print i,
+ˆD
+
+Note, the trailing comma after the print statement line ensures that each item is printed on the same line (as opposed to separate lines).
+The for statement generates an iterator object from the list by applying the iter() function. The resultant object has a next() method which accesses items in the sequence one at a time. A StopIteration exception is raised when there are no more items. This, in turn, terminates the for-loop. To illustrate, we can create an iterator:
+
+>>> x = iter("12345")
+
+The first call to the next() method returns the first digit for the binary sequence:
+
+>>> x.next()
+’1’
+
+Subsequent calls return the rest of the sequence:
+
+>>> x.next()
+’2’
+>>> x.next()
+’3’
+>>> x.next()
+’4’
+>>> x.next()
+’5’
+
+A StopIteration exception is raised when we attempt to read beyond the end of the iterator:
+>>> x.next() Traceback (most recent call last):
+File "<stdin>", line 1, in <module> StopIteration
+We can loop over the iterator with the for statement:
+>>> ... ... 12345
+for i in iter(’12345’): print i,
+ˆD
+Many Python objects have built-in iterators. For example, iterators, are evident in file handling methods. Create some arbitrary lines of text as data to write to a file:
+
+...there is more in the pdf file...
