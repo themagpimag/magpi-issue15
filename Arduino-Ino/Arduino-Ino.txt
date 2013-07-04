@@ -1,0 +1,48 @@
+Programming your Arduino from the command line
+By Nathan Bookham
+When I started getting into programming the Arduino, I stumbled across a great little tool that allows you to program your Arduino from the command line.
+
+
+
+Ino (inotool.org) is a tool written in Python that allows you to easily compile an Arduino with using a GUI (graphical user interface) or messing around with makefiles. It runs on Linux (as well as Mac, with Windows support coming soon), which means that we can run it on the Raspberry Pi.
+
+Installing Ino
+Ino is easy to install, and providing that you are running the latest version of Raspbian, and follow the instructions you shouldn’t run into problems.
+
+First of all, run the command below to update the apt repositories and to install any updates.
+sudo apt-get -y update && sudo apt-get -y upgrade
+After running this command, we need to install dependencies. Run the following command to do so.
+sudo apt-get install arduino picocom python-setuptools
+After the dependencies have been installed, use Python’s easy_install command to install pip.
+sudo easy_setup-2.7 pip
+Now we can use pip to install Ino and any python dependencies we need. To do this we run the following command.
+sudo pip install ino
+Ino will now search the Python Package Index and download the files it requires. It will automatically install these packages as well.
+
+To check that Ino has been installed we need to run a command to check that it can find the libraries and hardware files.
+ino list-models
+If a list of Arduino boards appear, you have successfully installed it. If you can’t see any boards, make sure that the Arduino package is installed and up-to-date.
+
+Using Ino
+Ino is well documented, so if you get stuck have a look at inotool.org/quickstart, or run ino --help.
+
+To create a new sketch make a new folder using mkdir.
+mkdir Blink
+Then open the Blink directory and use the Ino command to create the files and directories to create a sketch.
+cd Blink
+ino init
+This creates two directories, src and lib. You place your .ino files in the src folder, and any libraries that you reference to in the lib folder. When Ino initializes the directory, it automatically creates a file called sketch.ino.
+
+Once everything has been initialised, you can create a .ino file and use your favorite text editor to write your sketch. You can use nano, vim, or any other text editor. Remember to place libraries in the lib folder, not the src folder.
+
+Once you have created a sketch, we need to build it. If you use a board other than the Uno, be sure to change the board model. The Ino quickstart page shows you how to do this.
+We need to change directory to the Blink folder, and then build it.
+cd ..
+ino build
+Just wait a few moments while it compiles your sketch. Once done, you can upload it to your Arduino board. You can do this with the upload command.
+ino upload
+Ino is clever and can automatically detect which serial port your Arduino is on.
+Once uploaded, that’s it!
+
+To view the serial output of your Arduino, just use the following command.
+ino serial
