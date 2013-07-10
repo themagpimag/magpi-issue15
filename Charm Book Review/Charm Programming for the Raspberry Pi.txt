@@ -1,0 +1,11 @@
+Charm Programming on the Raspberry Pi
+Peter Nowosad
+Kindle Edition
+
+This book is a nice companion to the Charm articles published in The MagPi.
+
+The book begins with an excellent explanation of the differences between assembly and programming languages, and how they intereact. This is followed by the history of Charm, which was developed by the author of this book, running the RISC OS operating system. It is a charming story that will encourage others to play around with programming languages and possibly develop something new. The rest of the book is a reference guide to Charm with explanations of each aspect of the language and the obligatory "Hello world" program. The book finishes with Charm demo programs, such as (Chinese) checkers and hanoi. The book comes with an accompanying website (http://charm.qu-bit.co.uk/), which contains a download repository and the ability to contact the author with any queries or suggestions.
+
+While some of the English language using could be quite daunting to programming novices, this book contains excellent computer theory, which really explains the concept of computer programming to the beginner, but is still vigorous enough for the expert.
+
+If you are interested in learning more about Charm this is a good reference book to add to your Raspberry Pi/programming library!
