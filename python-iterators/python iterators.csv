@@ -1,0 +1,239 @@
+﻿Python Iterators and Generators
+Alan Holt
+November 13, 2012
+1 Introduction
+In this article we introduce Python iterators and generators. In computer science,
+an iterator is a container comprising a number of items. The items themselves are
+arbitrary and can be any data structure the language supports (they can even be
+other iterator objects).
+Iterators can be processed using common methods regardless of the nature of the
+items within the iterator. In contrast, with programming languages like C, lists
+(arrays) are traversed by looping through an index sequence counter or by incrementing
+a pointer.
+The C programmer has to know how many items there are (or test for a null pointer)
+in order to prevent looping beyond the end of the list. In contrast, iterators provide
+a way of signalling that the container has been exhausted, forcing the loop to terminate.
+A generator is an abstract control mechanism that produces a sequence, returning a
+new value each time it is called. Generators in Python resemble regular functions.
+What distinguishes regular functions from generators is that generators relinquish
+control by calling yield instead of return. This allows generators to be resumed
+later on. Generators are typically used to implement iterators but they can be used
+to write simple coroutines for co-operative multitasking.
+2 Examples
+In programming languages like C and Pascal, the for statement iterates over a progression
+of numbers. The for-loop construct has a start value and a termination
+condition (plus an optional step value). Python�s for statement is different, in
+1
+that, it iterates over a sequence (list, tuple or data dictionary). To illustrate, run the
+interactive Python interpreter and define a list:
+>>> a = [1,2,3,4,5]
+Now loop through the list (type CTRL-D after the �...�):
+>>> for i in a:
+... print i,
+... �D
+1 2 3 4 5
+Note, the trailing comma after the print statement line ensures that each item is
+printed on the same line (as opposed to separate lines).
+The for statement generates an iterator object fromthe list by applying the iter()
+function. The resultant object has a next() method which accesses items in the
+sequence one at a time. A StopIteration exception is raised when there are
+no more items. This, in turn, terminates the for-loop. To illustrate, we can create
+an iterator:
+>>> x = iter("12345")
+The first call to the next() method returns the first digit for the binary sequence:
+>>> x.next()
+�1�
+Subsequent calls return the rest of the sequence:
+>>> x.next()
+�2�
+>>> x.next()
+�3�
+>>> x.next()
+�4�
+>>> x.next()
+�5�
+2
+A StopIteration exception is raised when we attempt to read beyond the end
+of the iterator:
+>>> x.next()
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+StopIteration
+We can loop over the iterator with the for statement:
+>>> for i in iter(�12345�):
+... print i,
+... �D
+1 2 3 4 5
+Many Python objects have built-in iterators. For example, iterators, are evident in
+file handling methods. Create some arbitrary lines of text as data to write to a file:
+>>> line = "Python iterators and generators"
+>>> lines = "\n".join(line.split())
+>>> lines
+�Python\niterators\nand\ngenerators�
+Now open a file, write the lines of text and close it:
+>>> fd = open("title.txt", "w")
+>>> fd.write(lines)
+>>> fd.close()
+Open the file again, this time for reading:
+>>> fd = open("title.txt", "r")
+Read each line of the file:
+>>> for line in fd.readlines():
+... print line.strip(),
+... �D
+Python iterators and generators
+3
+Here the readlines() method returns a list (of lines), then the for statement
+loops through each line. This could present a problem for a large file, as the entire
+contents would be resident in memory. Go back to the start of the file and call the
+next() method a couple of times:
+>>> fd.seek(0) # go back to start of file
+>>> fd.next().strip()
+�Python�
+>>> fd.next().strip()
+�iterators�
+This shows that a value (in this case a line of text) is produced each time next()
+is called. We can read the remaining lines with a for-loop:
+>>> for line in fd:
+... print line.strip(),
+... �D
+and generators
+A StopIteration exception terminates the loop. We do not see it because the
+exception is caught by the for statement. We can verify the exception is raised by
+calling the next() method to read beyond the end of the file:
+>>> fd.next().strip()
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+StopIteration
+>>>
+For a more graceful exit, use the try/except statement:
+>>> try: fd.next().strip()
+... except StopIteration: print "end of file"
+...
+end of file
+4
+3 Writing Iterators and Generators
+In this section we show how to write iterators and generators. We write a function
+to compute factorial to illustrate. The factorial of a number is the product of all
+positive integers up to and including the number. Thus, 4 factorial is 1 � 2 � 3 �
+4 = 24. Specifically, for this example, we are interested in generating a sequence
+factorials from 0 to n.
+Define the factorial function (either type it in at the Python command-line or save
+it to a file and import it):
+def factorial(n):
+fact = [1]
+count = 1
+while True:
+if count > n:
+return fact
+else:
+fact.append(fact[-1] * count)
+count += 1
+Note that this is not an iterator, it is just a regular function that produces a list of
+the factorials (up to and including n). Generate the first five factorials (0 to 4):
+>>> factorial(4)
+[1, 1, 2, 6, 24]
+The factorial function produces a sequence (a list). We can then loop through this
+list using the for statement:
+>>> for i in factorial(4):
+... print i,
+... �D
+1 1 2 6 24
+The complete list is generated on execution of the for-loop. For long lists, this
+is an inefficient use of memory. Instead, it would be better to generate each item
+of the list upon each iteration of the for-loop. In short, we need an iterator rather
+than a function that merely returns a sequence. We could create an iterator with
+5
+the iter() function, but this achieves little, as the entire sequence of factorials
+would be created in memory when we ran factorial(). Furthermore, the for
+statement runs iter() on the sequence anyway.
+Implemented as an iterator, the factorial operation, is defined as the class below:
+class Factorial:
+def __init__(self,n):
+self.n = n
+self.fact = 0
+self.count = 0
+def next(self):
+if self.count > self.n:
+raise StopIteration
+self.fact *= self.count
+if self.fact < 1:
+self.fact = 1
+self.count+=1
+return self.fact
+Declare an instance of the class:
+>>> f2 = Factorial(4)
+Now call the next() method a couple of times:
+>>> f2.next()
+1
+>>> f2.next()
+2
+>>> f2.next()
+6
+However, when we attempt to loop through it (using a list comprehension construct),
+an exception is raised:
+>>> f2 = Factorial(4)
+>>> [i for i in f2]
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: iteration over non-sequence
+6
+Our class may have a next() method but it also needs an __iter__() method
+to make it an iterator. We simply need to add the __iter__() method to the
+class:
+class Factorial:
+def __init__(self,n):
+self.n = int(n)
+self.fact = int(0)
+self.count = int(0)
+def next(self):
+if self.count > self.n:
+raise StopIteration
+self.fact *= self.count
+if self.fact < 1:
+self.fact = 1
+self.count+=1
+return self.fact
+def __iter__(self):
+return self
+Declare a new instance of the (modified) class:
+>>> f3 = Factorial(4)
+Now we can iterate over it, in this example, using a list comprehension:
+>>> [i for i in f3]
+[1, 1, 2, 6, 24]
+When a regular subroutine returns, its stack frame is popped, consquently, the
+subroutine cannot be re-entered. Generator functions call yield() instead of
+return. The stack frame is retained, enabling the generator to be resumed. Generators
+are resumed by calling next(), furthermore they resume from the point
+just after the yield statement. Generators then continue to execute until the next
+yield() statement is called. To illustrate, the factorial() function above is
+re-written as a generator:
+def factorial(n):
+7
+fact = 1
+count = 0
+while True:
+if count > n:
+raise StopIteration
+else:
+if count != 0:
+fact *= count
+count += 1
+yield(fact)
+Declare an instance of the generator and iterate over it:
+>>> f4 = factorial(4)
+>>> [i for i in f4]
+[1, 1, 2, 6, 24]
+4 Summary
+Iterators in Python provide a �get next item� method (i.e. next()) as well as a
+means of signalling the end of the sequence (StopIteration exception). The
+inclusion of a __iter__() method in a class provides an interface to looping
+statements.
+Iterative procedures can be developed without any knowledge of internal structure
+of the iteration object. Iterators are ideal for processing long (or even infinite sequences)
+because each item of the sequence is generated only when it is referenced.
+The entire sequence, therefore, does not have to be resident in memory.
+Generators are functions that can be resumed. The yield() statement enables a
+function to be resumed each time the next() method is called. Generators are,
+therefore, more like coroutines than subroutines, and can be used for co-operative
+multitasking.
+8
