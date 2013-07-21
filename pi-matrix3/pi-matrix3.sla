@@ -45,10 +45,8 @@
         <LAYERS NUMMER="6" LEVEL="11" NAME="Article_Text" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ffff00"/>
         <LAYERS NUMMER="11" LEVEL="2" NAME="Effect : Header_Fade 002" SICHTBAR="0" DRUCKEN="0" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ffff"/>
         <Printer firstUse="1" toFile="1" useAltPrintCommand="1" outputSeparations="0" useSpotColors="0" useColor="1" mirrorH="1" mirrorV="0" useICC="0" doGCR="1" doClip="1" setDevParam="0" useDocBleeds="0" cropMarks="1" bleedMarks="1" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="3.74231782764791e-308" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
-        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="1" Quality="2" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
-            <Fonts Name="Courier 10 Pitch Bold"/>
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="1" Quality="2" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="1" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
             <Fonts Name="Monaco Regular"/>
-            <Subset Name="FreeMono Regular"/>
             <Subset Name="FreeSans Bold"/>
             <Subset Name="FreeSans Regular"/>
             <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
@@ -252,7 +250,7 @@
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    bus.write_byte_data(ADDR,PORTA,0x80&gt;&gt;col)"/>
             <para LINESP="14"/>
             <para LINESP="14"/>
-            <ITEXT FONTSIZE="11" CH="All of the routines that write to the chip will look like this; writing byte values to one or more chip registers.  They work fine as is but I decided to simplify them further by taking out the repetitive parts, like this:"/>
+            <ITEXT FONTSIZE="11" CH="All of the routines that write to the chip will look like this, writing byte values to one or more chip registers.  They work fine as is, but I decided to simplify them further by taking out the repetitive parts, like this:"/>
             <para LINESP="14"/>
             <para LINESP="14"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH=" def Write (register, value):"/>
@@ -354,7 +352,7 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="14" CH="Back to basics"/>
             <para LINESP="14"/>
             <para LINESP="14"/>
-            <ITEXT FONTSIZE="11" CH="Now that we can create any pattern in positive logic and in any orientation, it is much easier to set individual LEDs, columns and rows."/>
+            <ITEXT FONTSIZE="11" CH="Now that we can create any pattern in positive logic and in any orientation, it is much easier to set individual LEDs plus columns and rows of LEDs."/>
             <para LINESP="14"/>
             <para LINESP="14"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH=" def SetLED (row,col):"/>
@@ -378,7 +376,7 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="14" CH="Play time!"/>
             <para LINESP="14"/>
             <para LINESP="14"/>
-            <ITEXT FONTSIZE="11" CH="In part 2 we created some test patterns to exercise the Pi Matrix.  Here are a few more.  One of my favorites is the Cylon from the TV series Battlestar Galactica. This had a red eye that shifted position back and forth across its face."/>
+            <ITEXT FONTSIZE="11" CH="In Part 2 we created some test patterns to exercise the Pi Matrix.  Here are a few more.  One of my favorites is the Cylon from the TV series Battlestar Galactica. This had a red eye that shifted position back and forth across its face."/>
             <para LINESP="14"/>
             <para LINESP="14"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH=" def MultiRowCylon (pattern,numCycles):"/>
@@ -423,7 +421,7 @@
             <ITEXT CH="."/>
             <para LINESP="14"/>
             <para LINESP="14"/>
-            <ITEXT FONTSIZE="11" CH="The sample code for this month is too long to publish in the magazine but you can download it from "/>
+            <ITEXT FONTSIZE="11" CH="The sample code for this month is too long to publish in the magazine, but you can download it from "/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="http://w8bh.net/pi/matrix3.py"/>
             <ITEXT FONTSIZE="11" CH=". (You may need to change the ORIENTATION constant at the start of the file. Also, Model B Revision 1 owners need to set "/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="bus=smbus.SMBus(0)"/>
