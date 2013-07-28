@@ -26,12 +26,12 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
         <STYLE NAME="TOC_Title_Style" FONT="FreeSans Bold" LANGUAGE="English"/>
         <STYLE NAME="Body title" FONT="FreeSans Bold" FONTSIZE="14" FEATURES="underline" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
         <STYLE NAME="Body text" ALIGN="3" LINESP="14" FONTSIZE="11" LANGUAGE="English"/>
         <STYLE NAME="Code" LINESP="12" FONT="Monaco Regular" FONTSIZE="9" LANGUAGE="English"/>
-        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <LAYERS NUMMER="1" LEVEL="0" NAME="Header" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ff0000"/>
         <LAYERS NUMMER="9" LEVEL="3" NAME="Effect:Header_bottom_bar" SICHTBAR="1" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
         <LAYERS NUMMER="10" LEVEL="1" NAME="Effect : Header_Fade" SICHTBAR="0" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#0000ff"/>
@@ -289,141 +289,137 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="12" CH="Install Nanpy"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="The next step is to download the nanpy files:"/>
-            <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="I find it much easier to do on a Windows PC and then transfer the unzipped folder to the Pi via a memory stick."/>
+            <ITEXT FONTSIZE="11" CH="The next step is to download the nanpy files. I find it much easier to do on a Windows PC and then transfer the unzipped folder to the Pi via a memory stick. On a PC using your web browser navigate to https://github.com/nanpy/nanpy and click on the ZIP button. This downloads the zipped directory to your computer. Unzip it and copy the nanpy-master  directory via a USB stick to your pi directory."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="On a PC using your browser navigate to https://github.com/nanpy/nanpy and click on the ZIP button. This downloads the zipped directory. Unzip it and copy the nanpy-master  directory via a USB stick to your pi directory."/>
+            <ITEXT FONTSIZE="11" CH="Next, connect your Arduino via a USB cable to the Pi. Then open the LX Terminal and navigate to the firmware directory in nanpy-master"/>
+            <ITEXT CH=":"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="Open the LX Terminal and navigate to the firmware directory in nanpy-master."/>
-            <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="Connect your Arduino via a USB cable to the Pi. "/>
-            <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="12" CH="cd nanpy-master"/>
+            <ITEXT FONTSIZE="9" CH="cd nanpy-master"/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="12" CH="cd firmware"/>
+            <ITEXT FONTSIZE="9" CH="cd firmware"/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="12" CH="export BOARD=uno  "/>
-            <tab FONTSIZE="12"/>
-            <ITEXT FONTSIZE="12" CH="# (Type ‘make boards’ for a full list)"/>
+            <ITEXT FONTSIZE="9" CH="export BOARD=uno"/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="12" CH="make"/>
+            <ITEXT FONTSIZE="9" CH="# (Type ‘make boards’ for a full list)"/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="12" CH="make upload "/>
-            <tab FONTSIZE="12"/>
-            <ITEXT FONTSIZE="12" CH="# This also takes some time……."/>
+            <ITEXT FONTSIZE="9" CH="make"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="9" CH="make upload   # This also takes some time……"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="This RED section needs to be done each time you connect the Arduino to the RPi. It loads the Arduino part of nanpy into the Arduino ."/>
+            <ITEXT FONTSIZE="11" CH="This RED section needs to be done each time you connect the Arduino to the Raspberry Pi. It loads the Arduino part of nanpy into the Arduino."/>
+            <ITEXT CH=" Now type:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="cd .. "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="Move back to nanpy-master directory"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="cd .. "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Move back to nanpy-master directory"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="sudo python setup.py install"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo python setup.py install"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="This adds the RPi part of nanpy to Python2 and only needs to be done once. You can now use the Arduino as a I/O board for the Pi. This adds 19 extra I/O pins – 6 can be used for 10-bit analog inputs (range 0-1023) and 6 as PWM outputs (range 0-255)."/>
+            <ITEXT FONTSIZE="11" CH="This adds the Raspberry Pi part of nanpy to Python2 and only needs to be done once. You can now use the Arduino as an I/O board for the Pi. This adds 19 extra I/O pins – 6 can be used for 10-bit analog inputs (range 0-1023) and 6 as PWM outputs (range 0-255)."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Testing"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="The Arduino really needs to be connected via a powered USB hub so that it does not take too much power from the RPi. "/>
+            <ITEXT FONTSIZE="11" CH="The Arduino really needs to be connected via a powered USB hub so that it does not take too much power from the Raspberry Pi. "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="11" CH="On your Arduino connect an LED in series with a resistor (about 250 Ohms for protection) between pin 10 and ground. The longer lead of the LED, the anode, goes towards pin10 and the shorter, the cathode, towards GND. Pin 10 allows PWM (Pulse Width Modulation)."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="From LXED start LXTerminal and type:     sudo idle"/>
-            <tab FONTSIZE="11"/>
-            <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="           (With sudo you can run the program from the Run menu in Idle)"/>
-            <tab FONTSIZE="11"/>
-            <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="Click on File,then New window; to open a new window and type in the following program:"/>
+            <ITEXT FONTSIZE="11" CH="From the LXDE GUI on your Raspberry Pi, start LXTerminal once again and type:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="#!/usr/bin/env python"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="# LED with 250 Ohm resistor on Pin 10 to GND"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="# Tony Goodhew - 10 May 2013"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="from nanpy import Arduino"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="from nanpy import serial_manager"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="serial_manager.connect('/dev/ttyACM0')    "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH=" # serial connection to Arduino"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="from time import sleep"/>
-            <para PARENT="Code"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="LED =10                     "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# LED on Arduino Pin 10 (with PWM)"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="Arduino.pinMode(LED, Arduino.OUTPUT)"/>
-            <para PARENT="Code"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="print&quot;Starting&quot;"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="print&quot;5 blinks&quot;"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="for i in range(0,5):"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    Arduino.digitalWrite(LED, Arduino.HIGH)"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    sleep(0.5)"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    Arduino.digitalWrite(LED, Arduino.LOW)"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    sleep(0.5)"/>
-            <para PARENT="Code"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="print&quot;Changing brightness of LED&quot;"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="bright = 128                        "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# Mid brightness"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="Arduino.analogWrite(LED, bright)"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="Arduino.digitalWrite(LED,Arduino.HIGH)       "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# Turn on LED"/>
-            <para PARENT="Code"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="for i in range(0,200):"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    bright = bright + 8"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    if (bright &gt; 200):"/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# LED already full on at this point"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="        bright = 0"/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# Minimum power to LED"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    Arduino.analogWrite(LED, bright)"/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# Change PWM setting/brightness"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="    sleep(0.05)"/>
-            <para PARENT="Code"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="Arduino.digitalWrite(LED,Arduino.LOW)       "/>
-            <tab FONTSIZE="11"/>
-            <ITEXT FONTSIZE="11" CH="# Turn off LED"/>
-            <para PARENT="Code"/>
-            <ITEXT FONTSIZE="11" CH="print&quot;Finished&quot;"/>
-            <para PARENT="Code"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo idle"/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="11" CH="           "/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="11" CH="With sudo you can run the program from the Run menu in Idle. Click on File, then New window (to open a new window) and type in the following program:"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="#!/usr/bin/env python"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# LED with 250 Ohm resistor on Pin 10 to GND"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Tony Goodhew - 10 May 2013"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="from nanpy import Arduino"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="from nanpy import serial_manager"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="serial_manager.connect('/dev/ttyACM0')    "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH=" # serial connection to Arduino"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="from time import sleep"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="LED =10                     "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# LED on Arduino Pin 10 (with PWM)"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="Arduino.pinMode(LED, Arduino.OUTPUT)"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="print&quot;Starting&quot;"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="print&quot;5 blinks&quot;"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="for i in range(0,5):"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    Arduino.digitalWrite(LED, Arduino.HIGH)"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    sleep(0.5)"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    Arduino.digitalWrite(LED, Arduino.LOW)"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    sleep(0.5)"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="print&quot;Changing brightness of LED&quot;"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="bright = 128                        "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Mid brightness"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="Arduino.analogWrite(LED, bright)"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="Arduino.digitalWrite(LED,Arduino.HIGH)       "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Turn on LED"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="for i in range(0,200):"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    bright = bright + 8"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    if (bright &gt; 200):"/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# LED already full on at this point"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="        bright = 0"/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Minimum power to LED"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    Arduino.analogWrite(LED, bright)"/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Change PWM setting/brightness"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="    sleep(0.05)"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="Arduino.digitalWrite(LED,Arduino.LOW)       "/>
+            <tab FONT="Monaco Regular" FONTSIZE="9"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="# Turn off LED"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="print&quot;Finished&quot;"/>
+            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="11" CH="Save and run the program from the idle menu."/>
             <para PARENT="Body text"/>
@@ -439,7 +435,7 @@
             <para/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="128.347086614173" YPOS="956.505590555119" WIDTH="538.588346456693" HEIGHT="730.994409444881" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="2" COLGAP="25.51181102" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 730.994 538.588 730.994 538.588 730.994 538.588 730.994 0 730.994 0 730.994 0 730.994 0 730.994 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 730.994 538.588 730.994 538.588 730.994 538.588 730.994 0 730.994 0 730.994 0 730.994 0 730.994 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="40" BACKITEM="26">
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="128.347122192383" YPOS="956.505615234375" WIDTH="538.588317871094" HEIGHT="503.810302734375" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="2" COLGAP="25.51181102" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 503.81 538.588 503.81 538.588 503.81 538.588 503.81 0 503.81 0 503.81 0 503.81 0 503.81 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 503.81 538.588 503.81 538.588 503.81 538.588 503.81 0 503.81 0 503.81 0 503.81 0 503.81 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="40" BACKITEM="26">
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="2" XPOS="91.4995275590553" YPOS="158.776216225559" WIDTH="612.283464566929" HEIGHT="64.0546498911986" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.123419363952213" LOCALSCY="0.123419363952213" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="0" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="../../magpi-templates/generic-article/Fade_effect_002.png" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="1" LOCKR="1" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 612.283 0 612.283 0 612.283 0 612.283 0 612.283 64.0546 612.283 64.0546 612.283 64.0546 612.283 64.0546 0 64.0546 0 64.0546 0 64.0546 0 64.0546 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 612.283 0 612.283 0 612.283 0 612.283 0 612.283 64.0546 612.283 64.0546 612.283 64.0546 612.283 64.0546 0 64.0546 0 64.0546 0 64.0546 0 64.0546 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="11" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
@@ -491,7 +487,13 @@
             <trail ALIGN="1"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="2" PTYPE="4" XPOS="128.34708661126" YPOS="1838.39503937032" WIDTH="538.5883465" HEIGHT="730.9944094" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="2" COLGAP="25.51181102" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 730.994 538.588 730.994 538.588 730.994 538.588 730.994 0 730.994 0 730.994 0 730.994 0 730.994 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 730.994 538.588 730.994 538.588 730.994 538.588 730.994 0 730.994 0 730.994 0 730.994 0 730.994 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="27">
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="128.347091674805" YPOS="1486.5" WIDTH="538.588317871094" HEIGHT="194.918273925781" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 194.918 538.588 194.918 538.588 194.918 538.588 194.918 0 194.918 0 194.918 0 194.918 0 194.918 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 194.918 538.588 194.918 538.588 194.918 538.588 194.918 0 194.918 0 194.918 0 194.918 0 194.918 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="41" BACKITEM="27">
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="4" XPOS="128.347122192383" YPOS="1837.63842773438" WIDTH="538.588317871094" HEIGHT="269.861572265625" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 269.862 538.588 269.862 538.588 269.862 538.588 269.862 0 269.862 0 269.862 0 269.862 0 269.862 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 269.862 538.588 269.862 538.588 269.862 538.588 269.862 0 269.862 0 269.862 0 269.862 0 269.862 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="42" BACKITEM="40">
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="4" XPOS="128.347122192383" YPOS="2108.25" WIDTH="538.588317871094" HEIGHT="110.25" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="2" COLGAP="25.51181102" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 110.25 538.588 110.25 538.588 110.25 538.588 110.25 0 110.25 0 110.25 0 110.25 0 110.25 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 538.588 0 538.588 0 538.588 0 538.588 0 538.588 110.25 538.588 110.25 538.588 110.25 538.588 110.25 0 110.25 0 110.25 0 110.25 0 110.25 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="41">
             <PageItemAttributes/>
         </PAGEOBJECT>
     </DOCUMENT>
