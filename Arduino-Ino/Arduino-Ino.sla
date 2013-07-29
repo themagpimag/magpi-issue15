@@ -11,7 +11,7 @@
         <COLOR NAME="Blue" RGB="#0000ff" Spot="0" Register="0"/>
         <COLOR NAME="Code" CMYK="#3e100500" Spot="0" Register="0"/>
         <COLOR NAME="Cool Black" CMYK="#990000ff" Spot="0" Register="0"/>
-        <COLOR NAME="Cyan" CMYK="#bf1f6769" Spot="0" Register="0"/>
+        <COLOR NAME="Cyan" CMYK="#7abffa00" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#000000" RGB="#000000" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#bc1241" RGB="#bc1241" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#cccccc" RGB="#cccccc" Spot="0" Register="0"/>
