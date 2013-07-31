@@ -1,0 +1,10 @@
+juil. 30 22:37 config.log - roughly when building started (+5 minutes)
+juil. 31 04:41 build2.log - when building finished
+
+None   700MHz ARM, 250MHz core, 400MHz SDRAM, 0 overvolt - settings used to compile
+How much memory should the GPU have?  e.g. 16/32/64/128/256        │                               
+                               │
+│                               
+                               │ 64
+
+- settings used to compile 
