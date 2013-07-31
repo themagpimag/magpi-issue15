@@ -26,12 +26,12 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
         <STYLE NAME="TOC_Title_Style" FONT="FreeSans Bold" LANGUAGE="English"/>
         <STYLE NAME="Body text" ALIGN="3" LANGUAGE="English"/>
         <STYLE NAME="Body title" FONT="FreeSans Bold" FONTSIZE="14" FEATURES="underline" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
         <STYLE NAME="Code" LINESP="15" FONT="Monaco Regular" FONTSIZE="10" LANGUAGE="English"/>
-        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <LAYERS NUMMER="1" LEVEL="0" NAME="Header" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ff0000"/>
         <LAYERS NUMMER="9" LEVEL="3" NAME="Effect:Header_bottom_bar" SICHTBAR="1" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
         <LAYERS NUMMER="10" LEVEL="1" NAME="Effect : Header_Fade" SICHTBAR="0" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#0000ff"/>
@@ -261,7 +261,7 @@
             <ITEXT FONTSIZE="10" CH=" sudo apt-get upgrade -y"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Then download AdvMAME version 0.106.0 (advancemame-0.106.0.tar.gz) from,"/>
+            <ITEXT CH="Download AdvMAME version 0.106.0 (advancemame-0.106.0.tar.gz) from,"/>
             <para PARENT="Body text"/>
             <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://sourceforge.net/projects/advancemame/files/advancemame/0.106.0/"/>
             <para PARENT="Body text"/>
@@ -274,7 +274,10 @@
             <ITEXT CH=" sudo raspi-config"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="to disable X on boot and select the highest turbo overclocking mode that is stable on your Raspberry Pi.   Then reboot.  Login using your account and password.  Install the dependencies libsdl1.2-dev and gcc-4.7,"/>
+            <ITEXT CH="to disable X on boot.  This will allow the compilation to use the physical memory on top of the ARM chip, rather than accessing swap space on the SD card.  With no overclocking, it will take around six hours to compile.  Some overclocking will improve the performance of the emulator.    Select the highest turbo overclocking mode that is stable on your Raspberry Pi.   Compilation is possible with 64MBytes of RAM allocated to the GPU (default setting) on a 256MByte Raspberry Pi.  If more memory is allocated to the GPU, it will start to use the swap space a lot more and may fail to compile.  After completing the configuration, exit raspi-config and reboot.  "/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="Login using your account and password.  Install the dependencies libsdl1.2-dev and gcc-4.7,"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH=" sudo apt-get install -y libsdl1.2-dev \"/>
@@ -283,7 +286,7 @@
             <para PARENT="Code"/>
             <ITEXT CH=" "/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The gcc-4.7 compiler is needed to compile AdvMAME.  To use it, rather than the default compiler,"/>
+            <ITEXT CH="The gcc-4.7 compiler is needed to compile AdvMAME with the least additional effort.  (It is only possible to use the standard system compiler if several of the AdvMAME source files are modified.)  To use the gcc 4.7 compiler type,"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="10" CH=" export CC=gcc-4.7"/>
@@ -303,88 +306,161 @@
             <ITEXT CH=" make"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Compiling MAME takes a long time.  Disabling X is needed to prevent the Raspberry Pi from swapping, which would cause the compilation to take much longer.  When the compilation has finished type"/>
+            <ITEXT CH="The compilation will take four and a half to six hours, depending on your overclocking setting.  When the compilation has finished type"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH=" sudo make install"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="This is optional, but is useful as it negates the need to change directory or set the PATH manually.  Now use raspi-config to re-enable X on boot,"/>
+            <ITEXT CH="This is optional, but is useful as it negates the need to change directory or set the PATH manually. "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" sudo raspi-config"/>
+            <ITEXT CH="Configuring AdvMAME"/>
+            <para PARENT="Body title"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="advmame should be run once to setup all the correct folders and configuration files. Type,"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH=" advmame"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="EDITING STILL IN PROGRESS..."/>
+            <ITEXT CH="it will give you a message telling you that it has set up the default options.  Now type "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="7. Exit ROOT (NB If you don’t the Default folders that are set up automatically in Step 8 will have ROOT USER Privileges!). Type 'exit'"/>
+            <ITEXT CH=" startx"/>
+            <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="8. Run advmame to setup all the correct folders and configuration files. Type 'advmame' (it will give you a message telling you it is set up with ‘Default Options’)"/>
+            <ITEXT CH="to start X.  There should now be a hidden folder .advance in your home directory (/home/pi by default). If you cannot see it, right click on your mouse and tick the ‘show hidden folders’ box. "/>
             <para PARENT="Body text"/>
-            <ITEXT CH="9. Start ‘X’"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="10. There should now be a hidden folder .advance in the directory home/pi. If you cannot see it, right click on your mouse and tick the ‘show hidden folders’ box "/>
+            <ITEXT CH="Now download some ROMS.  As an example, the galaxian ROM can be downloaded from"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="11. Put ROMS in the appropriate folder (rom) and SAMPLES in (sample).  No need to uncompress them! "/>
+            <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://download.freeroms.com/mame_roms/g/galaxian.zip"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="12. In the advmame.rc add the line to drive the correct Video Signal - "/>
+            <ITEXT CH="Then either use the file manager or type"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60 (If using HDMI Output)"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="device_video_clock 5 - 50 / 15.73 / 60 (If using Composite Output)"/>
+            <ITEXT FONTSIZE="10" CH=" mv galaxian.zip ~/.advance/rom/"/>
+            <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="13.  Change the follwing lines from / to:"/>
+            <ITEXT CH="to move it into place.  If the selected ROM has samples, put those in the samples/ directory.  There is no need to uncompress them!"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="display_resize mixed / display_resize fractional"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="display_artwork_backdrop yes / display_artwork_backdrop no"/>
+            <ITEXT CH="Next, open "/>
             <para PARENT="Body text"/>
-            <ITEXT CH="display_artwork_overlay yes / display_artwork_overlay no"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="14. Close and Save advmame.rc"/>
+            <ITEXT FONTSIZE="10" CH=" .advance/advmame.rc"/>
+            <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="15. Exit ‘X’ (Optional, running from Console gives a significant performance increase AND Fullscreen Display!)"/>
+            <ITEXT CH="and add either"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="16. Now just Type 'advmame Name_of_ROM’ (the MAME code for the Game, NOT its Title!)"/>
+            <ITEXT CH=" "/>
             <para PARENT="Body text"/>
-            <ITEXT CH="e.g. 'advmame dkong' (obviously you MUST have the ROM File for the Game you attempting to run!) "/>
+            <ITEXT FONTSIZE="10" CH=" device_video_clock 5 - 50 / 15.62 / 50 ;"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="10" CH=" 5 - 50 / 15.73 / 60"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="(on one line) for HDMI output or "/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH=" device_video_clock 5 - 50 / 15.73 / 60"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="composite output.  Then change the lines"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="10" CH=" display_resize mixed"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="10" CH=" display_artwork_backdrop yes"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="10" CH=" display_artwork_overlay yes"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="to "/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="10" CH="display_resize fractional"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="10" CH="display_artwork_backdrop no"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="10" CH="display_artwork_overlay no"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="Then save and close advmame.rc.  MAME can be run from X, but using the console will significantly increase the performance and provide a fullscreen display.  Quit X."/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="Running MAME"/>
+            <para PARENT="Body title"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="Now that MAME has been fully configured, type"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH=" advmame Name_of_ROM"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="where Name_of_ROM is the name of the ROM rather than the game title.  For example,"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH=" advmame galaxian"/>
+            <para PARENT="Code"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="To play other games, download them and put the ROMs into the .advanced/rom/ directory."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Controls"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Control is with the cursor Keys, Fire/Jump Buttons are generally - Left Ctrl, Space and Left Alt (Joysticks and Gamepads can also be configured and used). All options for Control Settings, Video, Sound, Dip Switches etc. are easily modified in the Options Menu and can be saved for General ‘ALL Games’ or Individual Games ‘This Game’. "/>
+            <ITEXT CH="Control is with the cursor keys, the fire and jump buttons are generally "/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="Left-Ctrl"/>
+            <ITEXT CH=", "/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="Space"/>
+            <ITEXT CH=" and "/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="Left-Alt"/>
+            <ITEXT CH=" respectively.  Joysticks and gamepads can also be configured and used. All options for control settings, video, sound, dip switches etc. are easily modified in the options menu and can be saved for general ‘ALL Games’ or individual games ‘This Game’.  Other controls are:"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="5 - Add Coins"/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="5"/>
+            <ITEXT CH=" - Add Coins"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="1 - 1 Player"/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="1"/>
+            <ITEXT CH=" - 1 Player"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="2 - 2 Players"/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="2"/>
+            <ITEXT CH=" - 2 Players"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="TAB - Options Menu (use Cursor Keys and Enter)"/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="TAB"/>
+            <ITEXT CH=" - Options Menu (use Cursor Keys and Enter)"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="ESCape - Exit"/>
+            <ITEXT FONT="FreeSans Bold" FCOLOR="Cyan" FSHADE="100" CH="ESCape"/>
+            <ITEXT CH=" - Exit"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="ADVMAME.RC and Options Settings"/>
+            <ITEXT CH="Other configuration options"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="MAME settings can be infinitely customised, The defaults in advmame.rc perfectly acceptable, but there are a few exceptions:"/>
+            <ITEXT CH="MAME settings can be infinitely customised. The defaults in advmame.rc are perfectly acceptable for several games, but there are a few exceptions:"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="1. The default 'display_color' is ‘auto’. Vector games - Asteroids, Star Wars, etc. will suffer from an incorrect application, so DON’T change advmame.rc! In the Options Menu (TAB) navigate to Video, Color and change ‘auto’ to ‘bgr16’ then ‘Save for this Game’. "/>
             <para PARENT="Body text"/>
-            <ITEXT CH="2. The default 'display_mode' is ‘auto’ and 'display_magnify' is ‘1’. Certain games suffer from an incorrect application in Aspect Ratio (e.g. Burger Time (Data East: 1982), I-Robot (Atari Inc: 1983) and Track &amp; Field (Konami: 1983)). Again, DON'T change advmame.rc! In the Options Menu (TAB) navigate to Video, magnify and change ‘1’ to ‘2’ then ‘Save for this Game’"/>
-            <para PARENT="Body text"/>
-            <ITEXT CH="3. Consider changing 'display_resizeeffect' from ‘auto’ to ‘none’. Personally, I’m not a fan of any of these in emulations and they will be applied when changing the magnification mode as described above. However, they can be scrolled through in the Video Options Menu. Experiment, and see if you like any of them!  "/>
-            <para PARENT="Body text"/>
-            <ITEXT CH="4. if you are old enough to remember Amusement Arcades, did the SAME game seem harder in different venues? Well, it probably WAS! Inside the cabinet are toggle ‘DIP’ switches that could be set to change difficulty, lives, extras, etc. These are emulated in MAME and can be configured - Options (TAB), Dip Switches."/>
-            <para PARENT="Body text"/>
+            <ITEXT FCOLOR="Black" FSHADE="100" CH="1. The default 'display_color' is ‘auto’. Vector games - Asteroids, Star Wars, etc. will suffer from an incorrect application, so DON’T change advmame.rc! In the Options Menu (TAB) navigate to Video, Color and change ‘auto’ to ‘bgr16’ then ‘Save for this Game’. "/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <ITEXT FCOLOR="Black" FSHADE="100" CH="2. The default 'display_mode' is ‘auto’ and 'display_magnify' is ‘1’. Certain games suffer from an incorrect application in Aspect Ratio (e.g. Burger Time (Data East: 1982), I-Robot (Atari Inc: 1983) and Track &amp; Field (Konami: 1983)). Again, DON'T change advmame.rc! In the Options Menu (TAB) navigate to Video, magnify and change ‘1’ to ‘2’ then ‘Save for this Game’"/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <ITEXT FCOLOR="Black" FSHADE="100" CH="3. Consider changing 'display_resizeeffect' from ‘auto’ to ‘none’. Personally, I’m not a fan of any of these in emulations and they will be applied when changing the magnification mode as described above. However, they can be scrolled through in the video options menu. Experiment, and see if you like any of them!  "/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <para PARENT="Body text" ALIGN="0"/>
+            <ITEXT FCOLOR="Black" FSHADE="100" CH="4. If you are old enough to remember amusement arcades, did the SAME game seem harder in different venues? Well, it probably WAS! Inside the cabinet are toggle ‘DIP’ switches that could be set to change difficulty, lives, extras, etc. These are emulated in MAME and can be configured - options (TAB), Dip Switches."/>
+            <para PARENT="Body text" ALIGN="0"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Don't Like the Command Line?"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The Advance Suite of software also includes a fully integrated Front End for AdvMAME, AdvMENU (Available Here - http://sourceforge.net/projects/advancemame/files/advancemenu/). A Front End is a G.U.I (Graphical User Interface) which elevates the troublesome Command Line typing for Emulator control and execution, this can also be helpful when your ROM collection gets larger as to prevent having to remember all the MAME codes (or what ROMS are in the Folder!). This can be installed using the exact same method as described above (Stage 1-7 ONLY Required!), then just run the executable advmenu. "/>
+            <ITEXT CH="The Advance Suite of software also includes a fully integrated front end for AdvMAME, AdvMENU,"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="http://sourceforge.net/projects/advancemame/files/advancemenu/)"/>
+            <para PARENT="Body text"/>
+            <ITEXT CH="A front end is a G.U.I (Graphical User Interface), which elevates the troublesome command line typing for emulator control and execution.  The front end can also be helpful when your ROM collection gets larger, since it can become hard to remember all the MAME codes (or what ROMS are in the folder!). This can be installed using the exact same method as MAME itself.  Then just run the executable advmenu."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Older versions, better performance"/>
@@ -392,7 +468,16 @@
             <para PARENT="Body text"/>
             <ITEXT CH="Older versions of AdvMAME can often give improved results, but require changes to the scripts to compile correctly on the Raspberr Pi."/>
             <para PARENT="Body text"/>
-            <ITEXT CH="I suggest downloading 0.94.0, as it requires only a few script changes.  First, modify /advance/linux/vfb.c.  Change 'MAP_SHARED ! MAP_FIXED' to 'MAP_SHARED,'  Save and close and compile as above."/>
+            <ITEXT CH="I suggest downloading 0.94.0, as it requires only a few script changes.  First, modify /advance/linux/vfb.c.  Change 'MAP_SHARED ! MAP_FIXED' to 'MAP_SHARED,'  save and close and compile as above."/>
+            <para PARENT="Body text"/>
+            <para/>
+            <ITEXT CH="Arcade trivia"/>
+            <para PARENT="Body title"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="12" CH="In 1999, Billy Mitchell achieved the first perfect PacMan score of 3,333,360 by eating every possible dot, power pellet, fruit, and enemy!"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <ITEXT FONTSIZE="12" CH="Billy Mitchell's (yes, him again!) also set a world  record Donkey Kong score of 874,300 in 1982, which has yet to be beaten."/>
             <para PARENT="Body text"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -483,27 +568,59 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="411.00000002126" YPOS="1429.58267717166" WIDTH="255.9354331" HEIGHT="39.23716534803" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.2372 255.935 39.2372 255.935 39.2372 255.935 39.2372 0 39.2372 0 39.2372 0 39.2372 0 39.2372 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.2372 255.935 39.2372 255.935 39.2372 255.935 39.2372 0 39.2372 0 39.2372 0 39.2372 0 39.2372 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="1837" WIDTH="255.9354331" HEIGHT="26" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 26 255.935 26 255.935 26 255.935 26 0 26 0 26 0 26 0 26 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 26 255.935 26 255.935 26 255.935 26 0 26 0 26 0 26 0 26 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="410.999999970866" YPOS="1536.4645669252" WIDTH="255.9354331" HEIGHT="39.7086614212581" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.7087 255.935 39.7087 255.935 39.7087 255.935 39.7087 0 39.7087 0 39.7087 0 39.7087 0 39.7087 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.7087 255.935 39.7087 255.935 39.7087 255.935 39.7087 0 39.7087 0 39.7087 0 39.7087 0 39.7087 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="410.999999970866" YPOS="1610.16535432678" WIDTH="255.9354331" HEIGHT="39.7086614212581" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.7087 255.935 39.7087 255.935 39.7087 255.935 39.7087 0 39.7087 0 39.7087 0 39.7087 0 39.7087 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.7087 255.935 39.7087 255.935 39.7087 255.935 39.7087 0 39.7087 0 39.7087 0 39.7087 0 39.7087 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="411.00000002126" YPOS="1625.17322835276" WIDTH="255.9354331" HEIGHT="56.8267716472394" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 56.8268 255.935 56.8268 255.935 56.8268 255.935 56.8268 0 56.8268 0 56.8268 0 56.8268 0 56.8268 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 56.8268 255.935 56.8268 255.935 56.8268 255.935 56.8268 0 56.8268 0 56.8268 0 56.8268 0 56.8268 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="1958" WIDTH="255.9354331" HEIGHT="24.4724409448852" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.347086614173" YPOS="1834" WIDTH="255.9354331" HEIGHT="18" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.347086614173" YPOS="1907.70078740158" WIDTH="255.9354331" HEIGHT="36.2992125984242" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 36.2992 255.935 36.2992 255.935 36.2992 255.935 36.2992 0 36.2992 0 36.2992 0 36.2992 0 36.2992 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 36.2992 255.935 36.2992 255.935 36.2992 255.935 36.2992 0 36.2992 0 36.2992 0 36.2992 0 36.2992 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.34708661126" YPOS="1953.05511811055" WIDTH="255.9354331" HEIGHT="18" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.34708661126" YPOS="2131" WIDTH="255.9354331" HEIGHT="24" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.34708661126" YPOS="2057.9370078441" WIDTH="255.9354331" HEIGHT="18" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 18 255.935 18 255.935 18 255.935 18 0 18 0 18 0 18 0 18 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.34708661126" YPOS="1999" WIDTH="255.9354331" HEIGHT="65" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 65 255.935 65 255.935 65 255.935 65 0 65 0 65 0 65 0 65 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 65 255.935 65 255.935 65 255.935 65 0 65 0 65 0 65 0 65 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.347086614173" YPOS="2297.4094487992" WIDTH="255.9354331" HEIGHT="24" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="128.34708661126" YPOS="2371.11023618189" WIDTH="255.9354331" HEIGHT="24" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24 255.935 24 255.935 24 255.935 24 0 24 0 24 0 24 0 24 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="2017.52755903543" WIDTH="255.9354331" HEIGHT="39.4724409645651" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.4724 255.935 39.4724 255.935 39.4724 255.935 39.4724 0 39.4724 0 39.4724 0 39.4724 0 39.4724 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 39.4724 255.935 39.4724 255.935 39.4724 255.935 39.4724 0 39.4724 0 39.4724 0 39.4724 0 39.4724 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="2094.0629921063" WIDTH="255.9354331" HEIGHT="24.47244094" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="2156.42519687558" WIDTH="255.9354331" HEIGHT="49.5748031244152" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 49.5748 255.935 49.5748 255.935 49.5748 255.935 49.5748 0 49.5748 0 49.5748 0 49.5748 0 49.5748 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 49.5748 255.935 49.5748 255.935 49.5748 255.935 49.5748 0 49.5748 0 49.5748 0 49.5748 0 49.5748 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="2244.29921259763" WIDTH="255.9354331" HEIGHT="52.700787402367" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 52.7008 255.935 52.7008 255.935 52.7008 255.935 52.7008 0 52.7008 0 52.7008 0 52.7008 0 52.7008 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 52.7008 255.935 52.7008 255.935 52.7008 255.935 52.7008 0 52.7008 0 52.7008 0 52.7008 0 52.7008 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="411.00000002126" YPOS="2437.05511809053" WIDTH="255.9354331" HEIGHT="24.47244094" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="2" PTYPE="6" XPOS="410.999999970866" YPOS="2512.75590548189" WIDTH="255.9354331" HEIGHT="24.47244094" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Cyan" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 24.4724 255.935 24.4724 255.935 24.4724 255.935 24.4724 0 24.4724 0 24.4724 0 24.4724 0 24.4724 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
