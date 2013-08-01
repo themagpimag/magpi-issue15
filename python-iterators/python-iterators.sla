@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SCRIBUSUTF8NEW Version="1.4.2">
-    <DOCUMENT ANZPAGES="4" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" BORDERLEFT="28.3464566929134" BORDERRIGHT="28.3464566929134" BORDERTOP="28.3464566929134" BORDERBOTTOM="28.3464566929134" PRESET="0" BleedTop="8.50393700787402" BleedLeft="8.50393700787402" BleedRight="8.50393700787402" BleedBottom="8.50393700787402" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="3.881" UNITS="1" DFONT="Bitstream Charter Bold" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="3" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="CineonLog M " DPPr="Fogra27L CMYK Coated Press" DPIn="CineonLog M " DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="CineonLog M " DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="4" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="1" SnapToGuides="1" SnapToGrid="0" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWLAYERM="1" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.019" dispY="0.019" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="0" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
+    <DOCUMENT ANZPAGES="4" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" BORDERLEFT="28.3464566929134" BORDERRIGHT="28.3464566929134" BORDERTOP="28.3464566929134" BORDERBOTTOM="28.3464566929134" PRESET="0" BleedTop="8.50393700787402" BleedLeft="8.50393700787402" BleedRight="8.50393700787402" BleedBottom="8.50393700787402" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="3.881" UNITS="1" DFONT="Bitstream Charter Bold" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="3" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="CineonLog M " DPPr="Fogra27L CMYK Coated Press" DPIn="CineonLog M " DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="CineonLog M " DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="6" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="1" SnapToGuides="1" SnapToGrid="0" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWLAYERM="1" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.019" dispY="0.019" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="0" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
         <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
@@ -202,7 +202,7 @@
             <ITEXT CH="In this article we introduce Python iterators and generators. In computer science, an iterator is a container comprising a number of items. The items themselves are arbitrary and can be any data structure the language supports (they can even be other iterator objects)."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Iterators can be processed using common methods regardless of the nature of the items within the iterator. In contrast, with programming languages like C, lists (arrays) are traversed by looping through an index sequence counter or by incre- menting a pointer."/>
+            <ITEXT CH="Iterators can be processed using common methods regardless of the nature of the items within the iterator. In contrast, with programming languages like C, lists (arrays) are traversed by looping through an index sequence counter or by incrementing a pointer."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="The C programmer has to know how many items there are (or test for a null pointer) in order to prevent looping beyond the end of the list. In contrast, iterators provide a way of signalling that the container has been exhausted, forcing the loop to terminate."/>
@@ -214,7 +214,7 @@
             <ITEXT CH="Examples"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="In programming languages like C and Pascal, the for statement iterates over a pro- gression of numbers. The for-loop construct has a start value and a termination condition (plus an optional step value). Python’s for statement is different, in that, it iterates over a sequence (list, tuple or data dictionary). To illustrate, run the interactive Python interpreter and define a list:"/>
+            <ITEXT CH="In programming languages like C and Pascal, the for statement iterates over a progression of numbers. The for-loop construct has a start value and a termination condition (plus an optional step value). Python’s for statement is different, in that it iterates over a sequence (list, tuple or data dictionary). To illustrate, run the interactive Python interpreter and define a list:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH=" &gt;&gt;&gt; a = [1,2,3,4,5]"/>
@@ -235,10 +235,10 @@
             <ITEXT CH="Note, the trailing comma after the print statement line ensures that each item is printed on the same line (as opposed to separate lines)."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The for statement generates an iterator object fromthe list by applying the iter() function. The resultant object has a next() method which accesses items in the sequence one at a time. A StopIteration exception is raised when there are no more items. This, in turn, terminates the for-loop. To illustrate, we can create an iterator:"/>
+            <ITEXT CH="The for statement generates an iterator object from the list by applying the iter() function. The resultant object has a next() method which accesses items in the sequence one at a time. A StopIteration exception is raised when there are no more items. This, in turn, terminates the for-loop. To illustrate, we can create an iterator:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" &gt;&gt;&gt; x = iter(&quot;12345&quot;)"/>
+            <ITEXT CH=" &gt;&gt;&gt; x = iter('12345')"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <ITEXT CH="The first call to the next() method returns the first digit for the binary sequence:"/>
@@ -385,12 +385,10 @@
             <ITEXT CH=" end of file"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Writing Iterators and Generators"/>
+            <ITEXT CH="Writing iterators and generators"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="In this section we show how to write iterators and generators. We write a function to compute factorial to illustrate. The factorial of a number is the product of all positive integers up to and including the number. Thus, 4 factorial is 1 x 2 x 3 x 4 = 24. Specifically, for this example, we are interested in generating a sequence"/>
-            <para PARENT="Body text"/>
-            <ITEXT CH="factorials from 0 to n."/>
+            <ITEXT CH="In this section we show how to write iterators and generators. We write a function to compute factorial to illustrate. The factorial of a number is the product of all positive integers up to and including the number. Thus, 4 factorial is 1 x 2 x 3 x 4 = 24. Specifically, for this example, we are interested in generating a sequence of factorials from 0 to n."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Define the factorial function (either type it in at the Python command-line or save it to a file and import it):"/>
@@ -439,7 +437,7 @@
             <ITEXT CH="The complete list is generated on execution of the for-loop. For long lists, this is an inefficient use of memory. Instead, it would be better to generate each item of the list upon each iteration of the for-loop. In short, we need an iterator rather than a function that merely returns a sequence. We could create an iterator with the iter() function, but this achieves little, as the entire sequence of factorials would be created in memory when we ran factorial(). Furthermore, the for statement runs iter() on the sequence anyway."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Implemented as an iterator, the factorial operation, is defined as the class below:"/>
+            <ITEXT CH="Implemented as an iterator, the factorial operation is defined as the class below:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="9" CH=" class Factorial:"/>
@@ -555,7 +553,7 @@
             <ITEXT CH=" [1, 1, 2, 6, 24]"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="When a regular subroutine returns, its stack frame is popped, consquently, the subroutine cannot be re-entered. Generator functions call yield() instead of return. The stack frame is retained, enabling the generator to be resumed. Generators are resumed by calling next(), furthermore they resume from the point just after the yield statement. Generators then continue to execute until the next yield() statement is called.   To illustrate, the factorial() function above is re-written as a generator:"/>
+            <ITEXT CH="When a regular subroutine returns, its stack frame is popped, consequently; the subroutine cannot be re-entered. Generator functions call yield() instead of return. The stack frame is retained, enabling the generator to be resumed. Generators are resumed by calling next(), whereupon they resume from the point just after the yield statement. Generators then continue to execute until the next yield() statement is called.   To illustrate, the factorial() function above is re-written as a generator:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="9" CH=" def factorial(n):"/>
@@ -594,10 +592,10 @@
             <ITEXT CH="Summary"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Iterators in Python provide a &quot;get next item&quot; method (i.e. next()) as well as a means of signalling the end of the sequence (StopIteration exception). The inclusion of a __iter__() method in a class provides an interface to looping statements. "/>
+            <ITEXT CH="Iterators in Python provide a &quot;get next item&quot; method (i.e. next()) as well as a means of signalling the end of the sequence (StopIteration exception). The inclusion of an __iter__() method in a class provides an interface to looping statements. "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Iterative procedures can be developed without any knowledge of internal structure of the iteration object. Iterators are ideal for processing long (or even infinite sequences) because each item of the sequence is generated only when it is referenced. The entire sequence, therefore, does not have to be resident in memory."/>
+            <ITEXT CH="Iterative procedures can be developed without any knowledge of internal structure of the iteration object. Iterators are ideal for processing long (or even infinite) sequences because each item of the sequence is generated only when it is referenced. The entire sequence, therefore, does not have to be resident in memory."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Generators are functions that can be resumed. The yield() statement enables a function to be resumed each time the next() method is called. Generators are, therefore, more like coroutines than subroutines, and can be used for co-operative multitasking."/>
