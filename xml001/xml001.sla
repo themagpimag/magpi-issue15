@@ -252,7 +252,9 @@
             <para PARENT="heading"/>
             <ITEXT CH="Structure of an XML message"/>
             <para PARENT="heading"/>
-            <ITEXT CH="Unlike HTML, in XML you define your own tags.  A well formed XML message has a &quot;oot&quot; and then &quot;branches&quot; and &quot;leaves&quot;."/>
+            <ITEXT CH="Unlike HTML, in XML you define your own tags.  A well formed XML message has a &quot;"/>
+            <ITEXT FONTSIZE="11" CH="root"/>
+            <ITEXT CH="&quot; and then &quot;branches&quot; and &quot;leaves&quot;."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="The first line is the XML declaration.  It rarely changes. The second line describes the root element of the XML document."/>
@@ -267,7 +269,7 @@
             <ITEXT FONTSIZE="9" CH=" &lt;/XMLCOMMAND&gt;"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="11" CH="All elements in XML must have an opening and closing Tag.  This, in addition to the root is the definition of a &quot;well-formed XML document&quot;.  By the way, all tags in XML are case sensitive.  A good XML coding practice is to make all of the tags uppercase.  Doing this also makes the structure of the XML stand out when you read it."/>
+            <ITEXT FONTSIZE="11" CH="All elements in XML must have an opening and closing tag.  This, in addition to the root is the definition of a &quot;well-formed XML document&quot;.  By the way, all tags in XML are case sensitive.  A good XML coding practice is to make all of the tags uppercase.  Doing this also makes the structure of the XML stand out when you read it."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="14" CH="Add child elements"/>
