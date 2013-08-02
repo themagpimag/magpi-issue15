@@ -205,16 +205,16 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="14" FEATURES="inherit underline" CH="Step 1 - plug it in!"/>
             <para/>
             <para/>
-            <ITEXT CH="Plug the coin battery into the RTC by matching the positive + on the battery with the positive + on the module. Then simply plug the RTC into the Raspberry Pi as depicted. It sits on the furthest 6 GPIO pins at the SD card end of the Pi. Make sure your Pi is switched off before installation, and the battery is firmly seated in the Rasclock to avoid any damage to the module."/>
+            <ITEXT CH="To avoid any damage to the module, make sure your Raspberry Pi is switched off and the RTC battery is firmly seated before installation. Plug the coin battery into the RTC by matching the positive on the battery with the positive on the module and then plug the RTC into the Raspberry Pi's GPIO pins. It sits on the 6 GPIO pins at the SD card end of the Raspberry Pi."/>
             <para ALIGN="3"/>
             <para/>
             <ITEXT FONT="FreeSans Bold" FONTSIZE="14" FEATURES="inherit underline" CH="Step 2 - set-up"/>
             <para/>
             <para/>
-            <ITEXT CH="This RTC module is designed to be used in Raspbian. So, the first step is to make sure you have the latest Raspbian Operating System (OS) installed on your Raspberry Pi (http://www.raspberrypi.org/downloads). Currently, the module requires the installation of a driver that is not included in the standard Raspbian distribution; however a pre-compiled installation package is available which makes setup nice and easy."/>
+            <ITEXT CH="This RTC module is designed to be used in Raspbian. So the first step is to make sure you have the latest Raspbian Operating System (OS) installed on your Raspberry Pi (http://www.raspberrypi.org/downloads). Currently the module requires the installation of a driver that is not included in the standard Raspbian distribution; however a pre-compiled installation package is available which makes setup nice and easy."/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
-            <ITEXT CH="Make sure your Pi has internet access, and grab the installation package off the internet from an LXTerminal window:"/>
+            <ITEXT CH="Make sure your Pi has internet access and grab the installation package off the internet from an LXTerminal window:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="wget http://afterthoughtsoftware.com/files/linux-image-3.6.11-atsw-rtc_1.0_armhf.deb"/>
@@ -241,13 +241,13 @@
             <ITEXT CH="The next step involves editing the text in the Raspberry Pi boot files. I usually use nano text editor for these minor changes - it’s basic, pre-installed and easy to master. System commands for nano are enabled by holding the CTRL key (denoted as ^ in nano) whilst pressing the relevant command e.g. CTRL+X to exit."/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
-            <ITEXT CH="We need to configure Raspbian to load the RTC drivers at boot by adding the boot information to the /etc/modules configuration file."/>
+            <ITEXT CH="We need to configure Raspbian to load the RTC drivers at boot by adding the boot information to the /etc/modules configuration file:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo nano /etc/modules"/>
             <para ALIGN="0"/>
             <para ALIGN="3"/>
-            <ITEXT CH="(this will open the 'modules' file within nano text editor and allow you to make changes. To add text, simply use the arrows keys to browse to the next line in the boot file and add the following text, one per line. Then exit nano (CTRL+X) and don't forget to save those changes!)"/>
+            <ITEXT CH="(This will open the 'modules' file within nano text editor and allow you to make changes. To add text simply use the arrows keys to browse to the next line in the boot file and add the following text, one per line. Then exit nano (CTRL+X) and don't forget to save those changes!"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="i2c-bcm2708"/>
@@ -261,7 +261,7 @@
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo nano /etc/rc.local"/>
             <para ALIGN="0"/>
             <para ALIGN="3"/>
-            <ITEXT CH="For Rev 1. Raspberry Pi Boards Add the following text:"/>
+            <ITEXT CH="For Rev 1. Raspberry Pi boards add the following text:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="echo pcf2127a 0x51 &gt; /sys/class/i2c-adapter/i2c-0/new_device"/>
@@ -269,7 +269,7 @@
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="( sleep 2; hwclock -s ) &amp;"/>
             <para ALIGN="0"/>
             <para ALIGN="3"/>
-            <ITEXT CH="For Rev 2. Raspberry Pi Boards Add the following text:"/>
+            <ITEXT CH="For Rev 2. Raspberry Pi boards add the following text:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="echo pcf2127a 0x51 &gt; /sys/class/i2c-adapter/i2c-1/new_device"/>
@@ -277,7 +277,7 @@
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="( sleep 2; hwclock -s ) &amp;"/>
             <para ALIGN="0"/>
             <para ALIGN="3"/>
-            <ITEXT CH="Then reboot!"/>
+            <ITEXT CH="Then reboot:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo reboot"/>
@@ -286,7 +286,7 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="12" FEATURES="inherit underline" CH="Step 3 - using the RTC"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
-            <ITEXT CH="After you reboot the Raspberry Pi, you should be able to access the module using the hwclock command. The first time you use the clock you will need to set the time. To copy the system time into the clock module:"/>
+            <ITEXT CH="After you reboot the Raspberry Pi you should be able to access the module using the hwclock command. The first time you use the clock you will need to set the time. To copy the system time into the clock module:"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo hwclock –w"/>
@@ -304,7 +304,7 @@
             <ITEXT FONT="Monaco Regular" FONTSIZE="9" CH="sudo hwclock –s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "/>
             <ITEXT CH="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "/>
             <para ALIGN="0"/>
-            <ITEXT CH="That's it! You can now keep time using your Raspberry Pi with no Internet! Type hwclock into your resident search engine for a load more useful commands!"/>
+            <ITEXT CH="That's it... you can now keep time using your Raspberry Pi with no internet! Type hwclock into your resident search engine for a load more useful commands!"/>
             <trail ALIGN="3"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
