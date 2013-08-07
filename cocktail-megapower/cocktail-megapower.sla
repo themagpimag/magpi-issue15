@@ -213,7 +213,9 @@
             <ITEXT CH="If you have already installed either or both of the above mentioned IDE extensions,  you should not install them a second time or the consequences may be ugly.   Having installed the IDE extensions you can activate the Arduino IDE and select: Tools -&gt; Programmer -&gt; Raspberri Pi GPIO.  Then select: Tools -&gt; Board -&gt; MegaPower w/ ATmega328P (8MHz internal clock).  Activate: Tools -&gt; Burn Bootloader to initialise the ATmega fuses."/>
             <para PARENT="Body Text"/>
             <para PARENT="Body Text"/>
-            <ITEXT CH="If you succeeded in burning the bootloader without error, it is very likely that you'll be able to successfully program an Arduino sketch.  Try programming the Blink sketch from File -&gt; Examples -&gt; 01.Basics -&gt; Blink but you'll need to edit the sketch to use Pin 12 instead of Pin 13 for controlling the LED.  Then use: File -&gt; Upload Using Programmer to send the modified Blink sketch to the MCU.  After a surprisingly long delay ... the LED D4 should begin blinking.  You can find further instructions on the (Issue 15 page) of picocktails.blogspot.com for programming the StandardFirmata sketch and running the pyfirmataManager.py test program."/>
+            <ITEXT CH="If you succeeded in burning the bootloader without error, it is very likely that you'll be able to successfully program an Arduino sketch.  Try programming the Blink sketch from File -&gt; Examples -&gt; 01.Basics -&gt; Blink but you'll need to edit the sketch to use Pin 12 instead of Pin 13 for controlling the LED.  Then use: File -&gt; Upload Using Programmer to send the modified Blink sketch to the MCU.  After a surprisingly long delay ... the LED D4 should begin blinking.  You can find further instructions on the (Issue 15 page) of "/>
+            <ITEXT FCOLOR="Blue" FSHADE="100" CH="picocktails.blogspot.com"/>
+            <ITEXT CH=" for programming the StandardFirmata sketch and running the pyfirmataManager.py test program."/>
             <para PARENT="Body Text"/>
             <ITEXT FONTSIZE="14" FEATURES="inherit shadowed" CH=" "/>
             <para PARENT="Body Text"/>
