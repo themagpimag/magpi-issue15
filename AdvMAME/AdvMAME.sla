@@ -26,12 +26,12 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
         <STYLE NAME="TOC_Title_Style" FONT="FreeSans Bold" LANGUAGE="English"/>
         <STYLE NAME="Body text" ALIGN="3" LANGUAGE="English"/>
         <STYLE NAME="Body title" FONT="FreeSans Bold" FONTSIZE="14" FEATURES="underline" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
         <STYLE NAME="Code" LINESP="15" FONT="Monaco Regular" FONTSIZE="10" LANGUAGE="English"/>
-        <CHARSTYLE CNAME="Default Character Style" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <LAYERS NUMMER="1" LEVEL="0" NAME="Header" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ff0000"/>
         <LAYERS NUMMER="9" LEVEL="3" NAME="Effect:Header_bottom_bar" SICHTBAR="1" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
         <LAYERS NUMMER="10" LEVEL="1" NAME="Effect : Header_Fade" SICHTBAR="0" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#0000ff"/>
@@ -233,7 +233,9 @@
             <ITEXT CH="ROMS and Samples"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="ROM files will be required to run specific games.  These are readily available from thousands of emulation sites; search for ‘MAME ROMS’. MAME requires the correct ROM revision for individual versions of the core program.  Luckily, it will display and name the missing ROM files, so just try another ROM revision."/>
+            <ITEXT CH="ROM files will be required to run specific games.  There are some ROMs available for non-commercial use at "/>
+            <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://mamedev.org/roms/"/>
+            <ITEXT CH=" MAME requires the correct ROM revision for individual versions of the core program.  Luckily, it will display and name the missing ROM files, so just try another ROM revision."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Some early arcade games used additional ‘Discrete Logic’ circuits for sound (Astro Blaster (Sega: 1981), Berzerk (Stern Electronics: 1980), Donkey Kong (Certain Sounds e.g. The ‘Jump’), Gorf (Bally Midway: 1981) etc). MAME cannot Emulate these so samples are required to run correctly."/>
@@ -246,9 +248,9 @@
             <para PARENT="Body text"/>
             <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=78&amp;t=29427"/>
             <para PARENT="Body text"/>
+            <ITEXT CH="To run many of these MAME ROMs, a license is required,"/>
             <para PARENT="Body text"/>
-            <para PARENT="Body text"/>
-            <para PARENT="Body text"/>
+            <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://www.mamedev.org/devwiki/index.php?title=FAQ:ROMs"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Compiling AdvMAME"/>
             <para PARENT="Body title"/>
@@ -333,14 +335,16 @@
             <ITEXT CH="to start X.  There should now be a hidden folder .advance in your home directory (/home/pi by default). If you cannot see it, right-click your mouse and tick the ‘show hidden folders’ box. "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Now download some ROMS.  As an example, the Galaxian ROM can be downloaded from"/>
+            <ITEXT CH="Now download some ROMS.  As an example, the Star F"/>
+            <ITEXT FCOLOR="Black" FSHADE="100" CH="ire ROM can be downloaded from"/>
             <para PARENT="Body text"/>
-            <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://download.freeroms.com/mame_roms/g/galaxian.zip"/>
+            <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://mamedev.org/roms/starfire/starfire.zip"/>
+            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Then either use the file manager or type"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="10" CH=" mv galaxian.zip ~/.advance/rom/"/>
+            <ITEXT CH=" mv starfire.zip ~/.advance/rom/"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <ITEXT CH="to move it into place.  If the selected ROM has samples, put those in the samples/ directory.  There is no need to uncompress them!"/>
@@ -402,7 +406,7 @@
             <ITEXT CH="where Name_of_ROM is the name of the ROM rather than the game title.  For example,"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" advmame galaxian"/>
+            <ITEXT CH=" advmame starfire"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <ITEXT CH="To play other games, download them and put the ROMs into the .advanced/rom/ directory."/>
