@@ -38,7 +38,8 @@
         <LAYERS NUMMER="2" LEVEL="2" NAME="text" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ffff00"/>
         <LAYERS NUMMER="3" LEVEL="3" NAME="Page_number" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
         <Printer firstUse="1" toFile="1" useAltPrintCommand="1" outputSeparations="1" useSpotColors="0" useColor="0" mirrorH="0" mirrorV="0" useICC="1" doGCR="1" doClip="1" setDevParam="1" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="1" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="1.98387909936127e-316" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
-        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="1" Quality="2" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="1" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="600" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="1" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="600" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="0" cropMarks="1" bleedMarks="1" registrationMarks="1" colorMarks="1" docInfoMarks="1" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+            <Fonts Name="Century Schoolbook L Bold"/>
             <Subset Name="FreeSans Bold"/>
             <Subset Name="FreeSans Regular"/>
             <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
@@ -155,7 +156,7 @@
             <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="White" CH="Thank you very much for your amazing work! It reminds me when I was using the ZX81 way back and reading the magazines we had in France then..."/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
-            <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="White" CH="I've already connected the RaspberryPi to our TV set and my 8 years old son is having a blast creating Scratch sprites and having them move around and change colors when they hit each other."/>
+            <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="White" CH="I've already connected the RaspberryPi to our TV set and my 8 year old son is having a blast creating Scratch sprites and having them move around and change colors when they hit each other."/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="White" CH="I'm trying to teach him new tricks once in a while and I'm having some fun too!"/>
@@ -168,7 +169,7 @@
             <ITEXT FONT="FreeSans Bold" FONTSIZE="12" FEATURES="inherit underline" FCOLOR="Cyan" FSHADE="100" CH="Comments on Kickstarter"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
-            <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="Cyan" FSHADE="100" CH="Magpi Magazines - First 12 issues and binder finally arrived!"/>
+            <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="Cyan" FSHADE="100" CH="MagPi magazines - First 8 issues and binder finally arrived!"/>
             <para ALIGN="3"/>
             <para ALIGN="3"/>
             <ITEXT FONT="FreeSans Regular" FONTSIZE="12" FCOLOR="Cyan" FSHADE="100" CH="Excellent!!"/>
